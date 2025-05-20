@@ -1,10 +1,14 @@
 import React from 'react';
+import Banner from '../Components/Banner';
+import FeaturedGardeners from '../Components/FeaturedGardeners';
+import TrendingTips from '../Components/TrendingTips';
 
 const Home = () => {
     return (
         <div>
-           <h2 className='text-4xl'>This is home</h2>
-           <p className='text-lg'>This is home</p>
+           <Banner></Banner>
+           <FeaturedGardeners></FeaturedGardeners>
+           <TrendingTips></TrendingTips>
         </div>
     );
 };
