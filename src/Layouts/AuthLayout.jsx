@@ -5,7 +5,9 @@ import Navbar from '../Components/Navbar';
 const AuthLayout = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <div className='md:mx-60'>
+                <Navbar></Navbar>
+            </div>
             <Outlet></Outlet>
         </div>
     );

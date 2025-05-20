@@ -68,7 +68,7 @@ const LogIn = () => {
     }
 
     return (
-        <div className="hero mt-16 p-3">
+        <div className="hero mt-16 p-3 relative">
 
             <div className="card bg-secondary w-full max-w-sm shrink-0 shadow-2xl py-5" >
 
@@ -103,6 +103,8 @@ const LogIn = () => {
                     </button>
                 </div>
             </div >
+
+            <img className='hidden md:block h-[680px] z-10 absolute -left-5 -top-41' src="https://greenola.casethemes.net/wp-content/uploads/2025/04/home-3-srv-img2.png" alt="" />
 
         </div >
     );
