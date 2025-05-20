@@ -1,2 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@500;700&display=swap');
+
 @import "tailwindcss";
-@plugin "daisyui";
+
+@plugin "daisyui" {
+    themes: light --default, forest;
+}
+
+@plugin "daisyui/theme" {
+    name: "light";
+    default: true;
+    --color-primary: #8cc751;
+    --color-secondary: #018749;
+    --color-base-200: #D0F0C0;
+    --color-base-300: #DADD98;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+}
