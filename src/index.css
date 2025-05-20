@@ -11,8 +11,7 @@
     default: true;
     --color-primary: #8cc751;
     --color-secondary: #018749;
-    --color-base-200: #D0F0C0;
-    --color-base-300: #DADD98;
+    --color-success: #DADD98;
 }
 
 body {

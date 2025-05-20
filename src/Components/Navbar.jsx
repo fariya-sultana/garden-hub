@@ -73,19 +73,14 @@ const Navbar = () => {
                     {
                         user ?
                             <div className="dropdown dropdown-end md:dropdown-center mr-2">
-                                <div tabIndex={0} role="button" className="bg-primary rounded-full p-1 tooltip mt-2 " data-tip={user.displayName} >
+                                <div tabIndex={0} role="button" className="hover:bg-orange-100 rounded-full p-1 tooltip mt-2 " data-tip={user.displayName} >
                                     {
-                                        (user.photoURL) ? <img src={user.photoURL} alt="" className='md:w-10 md:h-10 w-6 rounded-full' /> : <img src={user?.photoURL || "https://i.postimg.cc/15HJjdw8/3135823.png"} alt="" className='md:w-10 md:h-10 w-6  rounded-full' />
+                                        (user.photoURL) ? <img src={user.photoURL} alt="" className=' w-6
+                                        md:w-8 rounded-full' /> : <img src={user?.photoURL || "https://i.postimg.cc/15HJjdw8/3135823.png"} alt="" className='md:w-10 md:h-10 w-6  rounded-full' />
                                     }
                                 </div>
-                                <div tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-54 p-2 shadow-sm text-center text-xl font-medium space-y-1 ">
-                                    <div className='bg-primary p-6 justify-items-center rounded-md mb-2'>
-                                        {
-                                            (user.photoURL) ? <img src={user.photoURL} alt="" className='md:w-20  rounded-full' /> : <img src={user?.photoURL || "https://i.postimg.cc/15HJjdw8/3135823.png"} alt="" className='w-20  rounded-full' />
-                                        }
-                                    </div>
-                                    <h3 className='text-secondary'>{user.displayName}</h3>
-                                    <button type='submit' onClick={handleLogout} className='btn btn-primary text-lg mt-2 font-bold inline-flex items-center gap-2 text-white'>Log Out <FcUnlock></FcUnlock></button>
+                                <div tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-40 p-2 shadow-sm text-center space-y-1 ">
+                                    <button type='submit' onClick={handleLogout} className='btn btn-primary text-sm  font-bold inline-flex items-center gap-1 text-white'>Log Out <FcUnlock></FcUnlock></button>
                                 </div>
                             </div> :
                             <>
