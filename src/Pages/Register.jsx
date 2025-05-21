@@ -74,10 +74,10 @@ const Register = () => {
     }
 
     return (
-        <div className="hero px-2 mt-8 relative">
+        <div className="hero px-2 mt-8">
 
             <div className="card bg-secondary w-full max-w-sm shrink-0 shadow-2xl py-5" >
-                <h2 className='font-bold text-3xl text-center text-white pb-3'>Register  your  account</h2>
+                <h2 className='font-medium text-3xl text-center text-white pb-3'>Register  your  account</h2>
 
                 <div className="card-body py-0">
                     <form onSubmit={handleRegister} className="fieldset">
@@ -122,7 +122,7 @@ const Register = () => {
                 </div>
             </div >
             
-            <img className='hidden md:block h-[680px] z-10 absolute -left-4 -top-30' src="https://greenola.casethemes.net/wp-content/uploads/2025/04/home-3-srv-img2.png" alt="" />
+            <img className='fixed hidden md:block h-[680px] z-10  left-0 top-0' src="https://greenola.casethemes.net/wp-content/uploads/2025/04/home-3-srv-img2.png" alt="" />
 
         </div >
     );

@@ -5,7 +5,7 @@ import { FaUsers } from 'react-icons/fa';
 const About = () => {
     return (
         <div className='relative'>
-            <div className=' my-12 md:my-40 max-w-7xl mx-auto grid md:grid-cols-1 lg:grid-cols-2 place-items-center '>
+            <div className='items-center my-12 md:my-40 max-w-7xl mx-auto grid md:grid-cols-1 lg:grid-cols-2 place-items-center '>
 
                 <div className=' group relative bg-green-800 rounded-full w-[300px] h-[300px] md:w-[450px] md:h-[450px] transition-all duration-500 ease-in-out hover:scale-[1.02]'>
 
@@ -22,14 +22,19 @@ const About = () => {
 
                 <div className='max-w-xl mx-4 mt-8'>
                     <p className='text-green-800 font-bold md:text-2xl text-lg md:mb-4 mb-1'>ABOUT</p>
-                    <h3 className='text-3xl md:text-6xl md:mb-8 mb-5 font-bold'> 20 Years of <br />Great Experience.</h3>
+                    <h3 className='text-3xl md:text-5xl md:mb-8 mb-5 font-medium'>
+                        20 Years of <br />Great Experience.
+                    </h3>
+
                     <p className='md:text-lg text-sm opacity-60 mb-5 md:mb-8'>We strive to not only meet but also help your business grow for a reliable Landscape Maintenance Service. Integrity, according to Uthan, is much more than a word.</p>
-                    <button className='btn bg-green-800 hover:bg-primary'>About More</button>
+                    <button className='btn bg-green-800 hover:bg-primary text-white'>About More</button>
                     <hr className='w-44 mx-auto mt-16 border-dashed border-green-800 md:hidden' />
                 </div>
             </div >
 
-            <img className='hidden lg:block h-[350px] z-10 absolute -right-5 -top-41' src="https://i.postimg.cc/9f8LM6zj/hanging.png" alt="" />
+            <img className='hidden lg:block h-[350px] z-10 absolute right-0 -top-41 animate-swing-slow' src="https://i.postimg.cc/9f8LM6zj/hanging.png" alt="" style={{
+                animation: 'swing 4s ease-in-out infinite alternate'
+            }} />
         </div>
     );
 };

@@ -11,11 +11,11 @@ const PrivateProvider = ({ children }) => {
 
     useEffect(() => {
         if (!loading && !user) {
-            navigate('/auth/login', { state: location, replace: true });
+            navigate('/login', { state: location, replace: true });
         }
     }, [loading, user, location, navigate]);
 
-    if (loading || (!user && location.pathname !== '/auth/login')) {
+    if (loading || (!user && location.pathname !== '/login')) {
         return <Loading />;
     }
 

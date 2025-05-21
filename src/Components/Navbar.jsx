@@ -11,12 +11,13 @@ const Navbar = () => {
 
     const { user, logOut } = use(AuthContext);
     const [theme, setTheme] = useState("light");
-
+    console.log("Current user: ", user);
     const links = <>
-        <li className='lg:hover:underline '><NavLink to={'/'}>Home</NavLink></li>
-        <li className='lg:hover:underline '><NavLink to={'/shareTip'}>Share a Garden Tip</NavLink></li>
+        <li className='lg:hover:underline lg:ml-40'><NavLink to={'/'}>Home</NavLink></li>
         <li className='lg:hover:underline '><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li>
-        <li className='lg:hover:underline '><NavLink to={'/myTip'}>My Tips</NavLink></li>
+        <li className='lg:hover:underline '><NavLink to={'/browseTips'}>Browse Tips</NavLink></li>
+        <li className='lg:hover:underline '><NavLink to={'/shareTips'}>Share a Garden Tip</NavLink></li>
+        <li className='lg:hover:underline '><NavLink to={'/myTips'}>My Tips</NavLink></li>
     </>
 
     const handleLogout = () => {
@@ -45,9 +46,9 @@ const Navbar = () => {
         localStorage.setItem("theme", newTheme);
         setTheme(newTheme);
     }
-
+    console.log(user);
     return (
-        <div className='max-w-7xl mx-auto mt-6'>
+        <div className='max-w-6xl mx-auto mt-6'>
             <div className="navbar bg-base-100 ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -60,7 +61,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <h2 className='text-xl md:text-3xl inline-flex items-center text-secondary'>
+                    <h2 className='text-xl md:text-3xl inline-flex items-center text-secondary font-semibold'>
                         <img className='w-8 md:w-10 md:mr-2' src="/public/plant-leaf.png" alt="" />Garden<span className='text-primary '>Hub</span>
                     </h2>
                 </div>
@@ -70,24 +71,57 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end items-center">
-                    {
-                        user ?
-                            <div className="dropdown dropdown-end md:dropdown-center mr-2">
-                                <div tabIndex={0} role="button" className="hover:bg-orange-100 rounded-full p-1 tooltip mt-2 " data-tip={user.displayName} >
-                                    {
-                                        (user.photoURL) ? <img src={user.photoURL} alt="" className=' w-6
-                                        md:w-8 rounded-full' /> : <img src={user?.photoURL || "https://i.postimg.cc/15HJjdw8/3135823.png"} alt="" className='md:w-10 md:h-10 w-6  rounded-full' />
+                    {user ? (
+                        <div className="dropdown dropdown-end md:dropdown-center mr-2">
+                            <div
+                                tabIndex={0}
+                                role="button"
+                                className="hover:bg-orange-100 rounded-full p-1 tooltip mt-2"
+                                data-tip={user.displayName}
+                            >
+                                <img
+                                    src={
+                                        user?.photoURL && user.photoURL.length > 0
+                                            ? user.photoURL
+                                            : "https://i.postimg.cc/15HJjdw8/3135823.png"
                                     }
-                                </div>
-                                <div tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-40 p-2 shadow-sm text-center space-y-1 ">
-                                    <button type='submit' onClick={handleLogout} className='btn btn-primary text-sm  font-bold inline-flex items-center gap-1 text-white'>Log Out <FcUnlock></FcUnlock></button>
-                                </div>
-                            </div> :
-                            <>
-                                <Link to={'/login'} className="btn bg-green-800 text-white hover:bg-primary hover:text-white font-bold btn-xs md:btn-sm md:mr-2 mr-1">Login</Link>
-                                <Link to={'/register'} className="btn bg-green-800 btn-xs text-white md:btn-sm font-bold hover:bg-primary hover:text-white md:mr-2 mr-1">Register</Link>
-                            </>
-                    }
+                                    alt="User Avatar"
+                                    className="w-6 md:w-8 md:h-8 h-6 rounded-full object-cover"
+                                    referrerPolicy="no-referrer"
+                                />
+
+                            </div>
+
+                            <div
+                                tabIndex={0}
+                                className="dropdown-content menu bg-white rounded-box z-1 w-40 p-2 shadow-sm text-center space-y-1"
+                            >
+                                <button
+                                    type="submit"
+                                    onClick={handleLogout}
+                                    className="btn btn-primary text-sm font-bold inline-flex items-center gap-1 text-white"
+                                >
+                                    Log Out <FcUnlock />
+                                </button>
+                            </div>
+                        </div>
+                    ) : (
+                        <>
+                            <Link
+                                to={"/login"}
+                                className="btn bg-green-800 text-white hover:bg-primary hover:text-white font-bold btn-xs md:btn-sm md:mr-2 mr-1"
+                            >
+                                Login
+                            </Link>
+                            <Link
+                                to={"/register"}
+                                className="btn bg-green-800 btn-xs text-white md:btn-sm font-bold hover:bg-primary hover:text-white md:mr-2 mr-1"
+                            >
+                                Register
+                            </Link>
+                        </>
+                    )}
+
                     <button onClick={handleTheme} className='md:text-2xl text-xl'>{theme === 'light' ? <CiLight /> : <CiDark />} </button>
                 </div>
             </div>
