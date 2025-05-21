@@ -7,12 +7,12 @@ const ChooseUs = () => {
                 <button className='btn mb-3 md:mb-5 bg-green-800 text-white rounded-full relative '>WHY CHOOSE US
                     <img className=' absolute bottom-5 -right-4' src="/public/plant-leaf.png" alt="" width={30} />
                 </button>
-                <h2 className='md:text-4xl text-3xl mb-5 font-medium'>Why we are considered as the best</h2>
-                <p className=' opacity-60  mb-8 md:mb-12 md:max-w-4xl md:mx-auto'>Elevate your environment with our unrivaled expertise and passion for excellence!Our rich legacy is roooted in our unwavering commitment to turning your green dreams into reality.</p>
+                <h2 className='md:text-4xl text-3xl mb-5 font-bold'>Why we are considered as the best</h2>
+                <p className=' opacity-60  mb-8 md:mb-12 md:max-w-4xl md:mx-auto text-lg'>Elevate your environment with our unrivaled expertise and passion for excellence!Our rich legacy is roooted in our unwavering commitment to turning your green dreams into reality.</p>
             </div>
 
             <div className='grid md:grid-cols-1 lg:grid-cols-2 items-center
-             gap-5 md:gap-20'>
+             gap-5 md:gap-16 lg:mx-10'>
 
                 <div className='space-y-6 place-items-center md:ml-12 mb-8'>
                     <div className='bg-white rounded-2xl border-r-6 border-r-primary shadow-2xl flex gap-2 md:gap-4 items-center md:p-10 p-4  lg:ml-36 md:w-2xl '>

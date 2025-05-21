@@ -32,7 +32,7 @@ const About = () => {
                 </div>
             </div >
 
-            <img className='hidden lg:block h-[350px] z-10 absolute right-0 -top-41 animate-swing-slow' src="https://i.postimg.cc/9f8LM6zj/hanging.png" alt="" style={{
+            <img className='hidden lg:block h-[350px] z-10 absolute right-4 -top-41 animate-swing-slow' src="https://i.postimg.cc/9f8LM6zj/hanging.png" alt="" style={{
                 animation: 'swing 4s ease-in-out infinite alternate'
             }} />
         </div>

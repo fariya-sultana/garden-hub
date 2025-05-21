@@ -11,7 +11,6 @@ const Navbar = () => {
 
     const { user, logOut } = use(AuthContext);
     const [theme, setTheme] = useState("light");
-    console.log("Current user: ", user);
     const links = <>
         <li className='lg:hover:underline lg:ml-40'><NavLink to={'/'}>Home</NavLink></li>
         <li className='lg:hover:underline '><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li>
@@ -46,7 +45,7 @@ const Navbar = () => {
         localStorage.setItem("theme", newTheme);
         setTheme(newTheme);
     }
-    console.log(user);
+    
     return (
         <div className='max-w-6xl mx-auto mt-6'>
             <div className="navbar bg-base-100 ">
