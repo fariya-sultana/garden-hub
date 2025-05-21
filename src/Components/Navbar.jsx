@@ -13,10 +13,10 @@ const Navbar = () => {
     const [theme, setTheme] = useState("light");
 
     const links = <>
-        <li><NavLink to={'/'}>Home</NavLink></li>
-        <li><NavLink to={'/shareTip'}>Share a Garden Tip</NavLink></li>
-        <li><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li>
-        <li><NavLink to={'/myTip'}>My Tips</NavLink></li>
+        <li className='lg:hover:underline '><NavLink to={'/'}>Home</NavLink></li>
+        <li className='lg:hover:underline '><NavLink to={'/shareTip'}>Share a Garden Tip</NavLink></li>
+        <li className='lg:hover:underline '><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li>
+        <li className='lg:hover:underline '><NavLink to={'/myTip'}>My Tips</NavLink></li>
     </>
 
     const handleLogout = () => {
@@ -84,8 +84,8 @@ const Navbar = () => {
                                 </div>
                             </div> :
                             <>
-                                <Link to={'/login'} className="btn bg-base-100 text-primary hover:bg-secondary hover:text-white font-bold btn-xs md:btn-sm md:mr-2 mr-1">Login</Link>
-                                <Link to={'/register'} className="btn bg-base-100 btn-xs text-primary md:btn-sm font-bold hover:bg-secondary hover:text-white md:mr-2 mr-1">Register</Link>
+                                <Link to={'/login'} className="btn bg-green-800 text-white hover:bg-primary hover:text-white font-bold btn-xs md:btn-sm md:mr-2 mr-1">Login</Link>
+                                <Link to={'/register'} className="btn bg-green-800 btn-xs text-white md:btn-sm font-bold hover:bg-primary hover:text-white md:mr-2 mr-1">Register</Link>
                             </>
                     }
                     <button onClick={handleTheme} className='md:text-2xl text-xl'>{theme === 'light' ? <CiLight /> : <CiDark />} </button>

@@ -3,6 +3,7 @@ import Banner from '../Components/Banner';
 import FeaturedGardeners from '../Components/FeaturedGardeners';
 import TrendingTips from '../Components/TrendingTips';
 import ChooseUs from '../Components/ChooseUs';
+import About from '../Components/About';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
            <Banner></Banner>
            <FeaturedGardeners></FeaturedGardeners>
            <TrendingTips></TrendingTips>
+           <About></About>
            <ChooseUs></ChooseUs>
         </div>
     );
