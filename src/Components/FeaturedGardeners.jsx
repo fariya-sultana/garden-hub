@@ -46,6 +46,9 @@ const FeaturedGardeners = () => {
                                 <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white bg-gradient-to-t from-black/50 to-transparent">
                                     <h2 className="text-lg font-semibold md:text-2xl text-center">{gardener.name}</h2>
                                     <p className="text-sm md:text-lg text-center">{gardener.expert}</p>
+                                    <div className='text-center mt-1'>
+                                        <p className="text-sm btn btn-xs text-center">{gardener.status}</p>
+                                    </div>
                                 </div>
                             </div>
                         ))

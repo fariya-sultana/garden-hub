@@ -12,6 +12,7 @@ import ShareTips from "../Pages/ShareTips";
 import ExploreGardeners from "../Pages/ExploreGardeners";
 import MyTips from "../Pages/MyTips";
 import BrowseTips from "../Pages/BrowseTips";
+import Loading from "../Components/Loading";
 
 
 const router = createBrowserRouter([
@@ -23,11 +24,14 @@ const router = createBrowserRouter([
             {
                 index: true,
                 loader: ()=> fetch("http://localhost:3000/gardeners"),
-                Component: Home
+                Component: Home,
+                hydrateFallbackElement: <Loading></Loading>
             },
             {
                 path: 'gardeners',
-                Component: ExploreGardeners
+                loader: ()=> fetch("http://localhost:3000/gardenersAll"),
+                Component: ExploreGardeners,
+                hydrateFallbackElement: <Loading></Loading>
             },
             {
                 path: 'browseTips',
