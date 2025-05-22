@@ -27,7 +27,7 @@ const About = () => {
                     </h3>
 
                     <p className='md:text-lg text-sm opacity-60 mb-5 md:mb-8'>We strive to not only meet but also help your business grow for a reliable Landscape Maintenance Service. Integrity, according to Uthan, is much more than a word.</p>
-                    <button className='btn bg-green-800 hover:bg-primary text-white'>About More</button>
+                    <button className='btn bg-green-800 hover:bg-green-700 text-white'>About More</button>
                     <hr className='w-44 mx-auto mt-16 border-dashed border-green-800 md:hidden' />
                 </div>
             </div >

@@ -51,7 +51,7 @@ const Navbar = () => {
             <div className="navbar bg-base-100 ">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className=" mr-2 lg:hidden">
+                        <div tabIndex={0} role="button" className=" mr-2 lg:hidden cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                         </div>
                         <ul
@@ -71,11 +71,11 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end items-center">
                     {user ? (
-                        <div className="dropdown dropdown-end md:dropdown-center mr-2">
+                        <div className="dropdown dropdown-end dropdown-center mr-2">
                             <div
                                 tabIndex={0}
                                 role="button"
-                                className="hover:bg-orange-100 rounded-full p-1 tooltip mt-2"
+                                className=" rounded-full p-1 tooltip mt-2 border-green-100 border  cursor-pointer"
                                 data-tip={user.displayName}
                             >
                                 <img
@@ -85,7 +85,7 @@ const Navbar = () => {
                                             : "https://i.postimg.cc/15HJjdw8/3135823.png"
                                     }
                                     alt="User Avatar"
-                                    className="w-6 md:w-8 md:h-8 h-6 rounded-full object-cover"
+                                    className="w-6 md:w-10 md:h-10 h-6 rounded-full object-cover"
                                     referrerPolicy="no-referrer"
                                 />
 
@@ -95,6 +95,7 @@ const Navbar = () => {
                                 tabIndex={0}
                                 className="dropdown-content menu bg-white rounded-box z-1 w-40 p-2 shadow-sm text-center space-y-1"
                             >
+                                
                                 <button
                                     type="submit"
                                     onClick={handleLogout}
@@ -121,7 +122,7 @@ const Navbar = () => {
                         </>
                     )}
 
-                    <button onClick={handleTheme} className='md:text-2xl text-xl'>{theme === 'light' ? <CiLight /> : <CiDark />} </button>
+                    <button onClick={handleTheme} className='cursor-pointer  rounded-full md:text-3xl text-xl'>{theme === 'light' ? <CiLight /> : <CiDark />} </button>
                 </div>
             </div>
         </div>

@@ -33,6 +33,7 @@ const FeaturedGardeners = () => {
                         gardeners.map(gardener => (
                             <div key={gardener._id} className="relative w-80 h-96 lg:w-[360px]
                         lg:h-[460px] overflow-hidden rounded-xl shadow-md group">
+                            
                                 <img
                                     src={gardener.image}
                                     alt={gardener.name}

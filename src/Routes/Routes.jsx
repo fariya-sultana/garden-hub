@@ -13,6 +13,7 @@ import ExploreGardeners from "../Pages/ExploreGardeners";
 import MyTips from "../Pages/MyTips";
 import BrowseTips from "../Pages/BrowseTips";
 import Loading from "../Components/Loading";
+import TipsDetails from "../Pages/TipsDetails";
 
 
 const router = createBrowserRouter([
@@ -23,20 +24,30 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: ()=> fetch("http://localhost:3000/gardeners"),
+                loader: () => fetch("http://localhost:5000/gardeners"),
                 Component: Home,
                 hydrateFallbackElement: <Loading></Loading>
             },
             {
                 path: 'gardeners',
-                loader: ()=> fetch("http://localhost:3000/gardenersAll"),
+                loader: () => fetch("http://localhost:5000/gardenersAll"),
                 Component: ExploreGardeners,
                 hydrateFallbackElement: <Loading></Loading>
             },
             {
                 path: 'browseTips',
-                Component: BrowseTips
+                Component: BrowseTips,
+                loader: () => fetch("http://localhost:5000/browseTips"),
+                hydrateFallbackElement: <Loading></Loading>
             },
+            {
+                path: 'tipsDetails/:id',
+                element: <PrivateProvider><TipsDetails /></PrivateProvider>,
+                loader: ({ params }) =>
+                    fetch(`http://localhost:5000/tipsDetails/${params.id}`),
+                hydrateFallbackElement: <Loading></Loading>
+            },
+
             {
                 path: 'shareTips',
                 element: <PrivateProvider><ShareTips></ShareTips></PrivateProvider>
