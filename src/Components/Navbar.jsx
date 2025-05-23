@@ -6,6 +6,8 @@ import './navbar.css'
 import { FcUnlock } from 'react-icons/fc';
 import { AuthContext } from '../Contexts/AuthContext';
 import Swal from 'sweetalert2';
+import { MdNightlight, MdOutlineLightMode } from 'react-icons/md';
+import { FaLightbulb } from 'react-icons/fa';
 
 const Navbar = () => {
 
@@ -63,8 +65,8 @@ const Navbar = () => {
                 <div className="navbar-start">
 
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className=" mr-2 lg:hidden cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                        <div tabIndex={0} role="button" className="  lg:hidden cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                         </div>
                         <ul
                             tabIndex={0}
@@ -73,9 +75,11 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <h2 className='z-20 text-xl md:text-3xl inline-flex items-center text-secondary font-semibold'>
-                        <img className='w-8 md:w-10 md:mr-2' src="/public/plant-leaf.png" alt="" />Garden<span className='text-primary '>Hub</span>
-                    </h2>
+                    <div className='hidden md:block'>
+                        <h2 className=' z-20 text-xl md:text-3xl inline-flex items-center text-secondary font-semibold'>
+                            <img className='w-8 md:w-10 md:mr-2' src="/public/plant-leaf.png" alt="" />Garden<span className='text-primary '>Hub</span>
+                        </h2>
+                    </div>
 
                 </div>
 
@@ -88,7 +92,7 @@ const Navbar = () => {
                 <div className="navbar-end items-center">
 
                     {user ? (
-                        <div className="dropdown dropdown-end dropdown-center  ">
+                        <div className="dropdown dropdown-end dropdown-center space-x-2 ">
 
                             <div
                                 tabIndex={0}
@@ -148,8 +152,8 @@ const Navbar = () => {
 
                     <button
                         onClick={handleTheme}
-                        className='cursor-pointer  rounded-full md:text-3xl text-xl'>
-                        {theme === 'light' ? <CiLight /> : <CiDark />}
+                        className='btn btn-circle cursor-pointer btn-sm md:btn-md rounded-full md:text-3xl text-xl'>
+                        {theme === 'light' ? <MdNightlight /> : <MdOutlineLightMode />}
                     </button>
 
                 </div>

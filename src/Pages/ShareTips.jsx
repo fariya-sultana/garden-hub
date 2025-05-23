@@ -15,7 +15,7 @@ const ShareTips = () => {
         const formData = new FormData(form);
         const newTips = Object.fromEntries(formData.entries());
 
-        fetch('http://localhost:5000/newTips', {
+        fetch('https://garden-hub-server-zeta.vercel.app/newTips', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

@@ -4,7 +4,7 @@ const TrendingTips = () => {
     const [tips, setTips] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/trendingTips")
+        fetch("https://garden-hub-server-zeta.vercel.app/trendingTips")
             .then(res => res.json())
             .then(data => setTips(data));
     }, []);

@@ -13,7 +13,7 @@ const MyTips = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/myTips?email=${user.email}`)
+            fetch(`https://garden-hub-server-zeta.vercel.app/myTips?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setTips(data);
@@ -34,7 +34,7 @@ const MyTips = () => {
             confirmButtonText: 'Yes, delete it!',
         }).then(result => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/deleteTip/${id}`, {
+                fetch(`https://garden-hub-server-zeta.vercel.app/deleteTip/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

@@ -16,7 +16,7 @@ const UpdateTips = () => {
         const formData = new FormData(form);
         const updatedTip = Object.fromEntries(formData.entries());
 
-        fetch(`http://localhost:5000/updateTips/${params.id}`, {
+        fetch(`https://garden-hub-server-zeta.vercel.app/updateTips/${params.id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

@@ -8,7 +8,7 @@ const TipsDetails = () => {
 
     const handleLike = async () => {
         if (!liked) {
-            const res = await fetch(`http://localhost:5000/tips/like/${tip._id}`, {
+            const res = await fetch(`https://garden-hub-server-zeta.vercel.app/tips/like/${tip._id}`, {
                 method: 'PATCH',
             });
 

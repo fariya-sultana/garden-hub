@@ -24,26 +24,26 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: () => fetch("http://localhost:5000/gardeners"),
+                loader: () => fetch("https://garden-hub-server-zeta.vercel.app/gardeners"),
                 Component: Home,
                 hydrateFallbackElement: <Loading />
             },
             {
                 path: "gardeners",
-                loader: () => fetch("http://localhost:5000/gardenersAll"),
+                loader: () => fetch("https://garden-hub-server-zeta.vercel.app/gardenersAll"),
                 Component: ExploreGardeners,
                 hydrateFallbackElement: <Loading />
             },
             {
                 path: "browseTips",
-                loader: () => fetch("http://localhost:5000/browseTips"),
+                loader: () => fetch("https://garden-hub-server-zeta.vercel.app/browseTips"),
                 Component: BrowseTips,
                 hydrateFallbackElement: <Loading />
             },
             {
                 path: "tipsDetails/:id",
                 loader: ({ params }) =>
-                    fetch(`http://localhost:5000/tipsDetails/${params.id}`),
+                    fetch(`https://garden-hub-server-zeta.vercel.app/tipsDetails/${params.id}`),
                 element: <PrivateProvider><TipsDetails /></PrivateProvider>,
                 hydrateFallbackElement: <Loading />
             },
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
             {
                 path: "updateTips/:id",
                 loader: ({ params }) =>
-                    fetch(`http://localhost:5000/updateTips/${params.id}`),
+                    fetch(`https://garden-hub-server-zeta.vercel.app/updateTips/${params.id}`),
                 element: <PrivateProvider><UpdateTips /></PrivateProvider>,
                 hydrateFallbackElement: <Loading />
 

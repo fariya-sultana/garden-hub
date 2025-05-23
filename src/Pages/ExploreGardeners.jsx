@@ -44,7 +44,7 @@ const ExploreGardeners = () => {
 
             <div className='max-w-11/12 md:mx-auto place-items-center mx-4 grid lg:grid-cols-2 gap-8 my-12 md:my-24'>
                 {
-                    gardeners.map(gardener => <div className="card md:flex-row gap-8 bg-green-50 shadow-sm items-center p-5 md:w-[650px]">
+                    gardeners.map(gardener => <div key={gardener._id} className="card md:flex-row gap-8 bg-green-50 shadow-sm items-center p-5 md:w-[650px]">
                         <figure>
                             <img
                                 className='rounded-2xl md:w-[320px] md:h-[320px] '
