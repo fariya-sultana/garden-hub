@@ -22,22 +22,23 @@ const Banner = () => {
                     >
                         <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-transparent"></div>
                         <div className="md:my-auto  relative z-10 md:ml-10 ml-4 mt-20">
-                            <div className="max-w-xl">
+                            <div className="max-w-2xl">
                                 <h3 className="mb-3 md:text-4xl text-2xl font-medium text-primary">🪴 Save the dates</h3>
-                                <h2 className="mb-5 md:text-5xl text-3xl font-medium text-white">
-                                    <Typewriter
-                                        words={[
-                                            'Join Us-Its Time to Grow, share and Inspire!'
-                                        ]}
-                                        loop={true}
-                                        cursor
-                                        cursorStyle="|"
-                                        typeSpeed={50}
-                                        deleteSpeed={50}
-                                        delaySpeed={1500}
-                                    />
+                                <h2 className="mb-5 md:text-5xl text-3xl font-medium text-white h-[120px] leading-10 md:leading-14">
+                                    <span className="block min-h-[60px] md:min-h-[80px]">
+                                        <Typewriter
+                                            words={['Join Us - It\'s Time to Grow, Share and Inspire!']}
+                                            loop={true}
+                                            cursor
+                                            cursorStyle="|"
+                                            typeSpeed={50}
+                                            deleteSpeed={50}
+                                            delaySpeed={1500}
+                                        />
+                                    </span>
                                 </h2>
-                                <p className="mb-5 text-white opacity-70">June 14th 10am-12pm Growing Tomatoes presented by Dr.David Boucher.July 12th 10am-12pm Ask a Master Gardener & Tool Sharoening presented by Dana Withall,Donn Reese, and Kathy Pyle
+
+                                <p className="mb-5 max-w-xl text-white opacity-70">June 14th 10am-12pm Growing Tomatoes presented by Dr.David Boucher.July 12th 10am-12pm Ask a Master Gardener & Tool presented by Dana Withall,Donn Reese, and Kathy Pyle
                                 </p>
                                 <button className="btn btn-primary text-white">Contact GardenHUb</button>
                             </div>
@@ -56,7 +57,7 @@ const Banner = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-transparent"></div>
                         <div className="md:my-auto  relative z-10 md:ml-10 ml-4">
                             <div className="max-w-xl">
-                                <h2 className="mb-5 text-3xl md:text-5xl font-medium text-white">
+                                <h2 className="mb-5 text-3xl md:text-5xl font-medium  text-white md:h-[120px] h-[80px] leading-12 md:leading-14">
                                     <Typewriter
                                         words={[
                                             '🌾 Join our Summer 2025 Volunteer Team!'
@@ -76,7 +77,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </SwiperSlide>
-                
+
                 <SwiperSlide>
                     <div
                         className="hero min-h-screen"
@@ -89,7 +90,7 @@ const Banner = () => {
                         <div className="hero-content z-10">
                             <div className="max-w-2xl">
                                 <h3 className="mb-3 text-2xl md:text-4xl font-medium text-primary">🌿 Garden Party</h3>
-                                <h2 className="mb-5 text-3xl md:text-5xl font-medium text-white">
+                                <h2 className="mb-5 text-3xl md:text-5xl font-medium text-white leading-10 md:leading-14 h-[120px]">
                                     <Typewriter
                                         words={[
                                             'A virtual event series offering gardening tips,tricks.'

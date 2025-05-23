@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Contexts/AuthContext';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
 
@@ -75,6 +76,9 @@ const Register = () => {
 
     return (
         <div className="hero px-2 mt-8">
+            <Helmet>
+                <title>GardenHub | Register</title>
+            </Helmet>
 
             <div className="card bg-secondary w-full max-w-sm shrink-0 shadow-2xl py-5" >
                 <h2 className='font-medium text-3xl text-center text-white pb-3'>Register  your  account</h2>
@@ -121,7 +125,7 @@ const Register = () => {
                     </button>
                 </div>
             </div >
-            
+
             <img className='fixed hidden md:block h-[680px] z-10  left-0 top-0' src="https://greenola.casethemes.net/wp-content/uploads/2025/04/home-3-srv-img2.png" alt="" />
 
         </div >

@@ -1,10 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FaSeedling } from 'react-icons/fa';
 import { Link } from 'react-router';
 
 const Error = () => {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-base-100 px-4 text-center">
+            <Helmet>
+                <title>GardenHub | Error</title>
+            </Helmet>
             <div className="max-w-md">
                 <FaSeedling className="text-6xl text-primary animate-bounce mb-4 mx-auto" />
                 <h1 className="text-6xl font-bold text-secondary mb-4">404</h1>

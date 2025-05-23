@@ -46,7 +46,7 @@ const Footer = () => {
             <img src="https://greenola.casethemes.net/wp-content/uploads/2025/03/svg_water_can.svg" alt="" />
             <hr className='border-primary' />
 
-            <footer className="footer sm:footer-horizontal text-neutral-content items-center pt-4 md:pt-10">
+            <footer className="footer sm:footer-horizontal text-neutral-content items-center pt-4">
                 <aside className="grid-flow-col items-center">
                     <svg
                         width="36"

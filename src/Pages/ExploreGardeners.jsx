@@ -2,13 +2,16 @@ import Lottie from 'lottie-react';
 import React from 'react';
 import { useLoaderData } from 'react-router';
 import waveAnimation from '../assets/animation/wave.json'
+import { Helmet } from 'react-helmet-async';
 
 const ExploreGardeners = () => {
     const gardeners = useLoaderData();
 
     return (
         <div className=''>
-
+            <Helmet>
+                <title>GardenHub | Explore Gardeners</title>
+            </Helmet>
             <div
                 className="hero h-[300px] max-w-full relative"
                 style={{
@@ -39,16 +42,16 @@ const ExploreGardeners = () => {
             </div>
 
 
-            <div className='max-w-6xl place-items-center lg:mx-auto mx-4 grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-12 md:my-24'>
+            <div className='max-w-11/12 md:mx-auto place-items-center mx-4 grid lg:grid-cols-2 gap-8 my-12 md:my-24'>
                 {
-                    gardeners.map(gardener => <div className="card bg-green-50 shadow-sm p-5">
+                    gardeners.map(gardener => <div className="card md:flex-row gap-8 bg-green-50 shadow-sm items-center p-5 md:w-[650px]">
                         <figure>
                             <img
-                                className='rounded-2xl md:w-[389px] md:h-[320px] '
+                                className='rounded-2xl md:w-[320px] md:h-[320px] '
                                 src={gardener.image}
                                 alt="Album" />
                         </figure>
-                        <div className='mt-8 space-y-4 '>
+                        <div className=' space-y-4 '>
                             <h2 className="card-title text-2xl text-green-800 ">{gardener.name} </h2>
                             <p className='text-xl text-green-800 font-semibold '>Age: {gardener.age} </p>
                             <p className='text-xl text-green-800 font-semibold '>Gender: {gardener.gender} </p>

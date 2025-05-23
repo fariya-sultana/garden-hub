@@ -5,7 +5,7 @@ import { FaUsers } from 'react-icons/fa';
 const About = () => {
     return (
         <div className='relative'>
-            <div className='items-center my-12 md:my-40 max-w-7xl mx-auto grid md:grid-cols-1 lg:grid-cols-2 place-items-center '>
+            <div className='items-center my-16 md:my-44 max-w-7xl mx-auto grid md:grid-cols-1 lg:grid-cols-2 place-items-center '>
 
                 <div className=' group relative bg-green-800 rounded-full w-[300px] h-[300px] md:w-[450px] md:h-[450px] transition-all duration-500 ease-in-out hover:scale-[1.02]'>
 

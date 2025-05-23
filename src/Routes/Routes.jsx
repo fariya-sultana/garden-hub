@@ -12,49 +12,58 @@ import ShareTips from "../Pages/ShareTips";
 import ExploreGardeners from "../Pages/ExploreGardeners";
 import MyTips from "../Pages/MyTips";
 import BrowseTips from "../Pages/BrowseTips";
-import Loading from "../Components/Loading";
 import TipsDetails from "../Pages/TipsDetails";
-
+import UpdateTips from "../Pages/UpdateTips";
+import Loading from "../Components/Loading";
 
 const router = createBrowserRouter([
     {
         path: "/",
         Component: MainLayout,
-        errorElement: <Error></Error>,
+        errorElement: <Error />,
         children: [
             {
                 index: true,
                 loader: () => fetch("http://localhost:5000/gardeners"),
                 Component: Home,
-                hydrateFallbackElement: <Loading></Loading>
+                hydrateFallbackElement: <Loading />
             },
             {
-                path: 'gardeners',
+                path: "gardeners",
                 loader: () => fetch("http://localhost:5000/gardenersAll"),
                 Component: ExploreGardeners,
-                hydrateFallbackElement: <Loading></Loading>
+                hydrateFallbackElement: <Loading />
             },
             {
-                path: 'browseTips',
-                Component: BrowseTips,
+                path: "browseTips",
                 loader: () => fetch("http://localhost:5000/browseTips"),
-                hydrateFallbackElement: <Loading></Loading>
+                Component: BrowseTips,
+                hydrateFallbackElement: <Loading />
             },
             {
-                path: 'tipsDetails/:id',
-                element: <PrivateProvider><TipsDetails /></PrivateProvider>,
+                path: "tipsDetails/:id",
                 loader: ({ params }) =>
                     fetch(`http://localhost:5000/tipsDetails/${params.id}`),
-                hydrateFallbackElement: <Loading></Loading>
+                element: <PrivateProvider><TipsDetails /></PrivateProvider>,
+                hydrateFallbackElement: <Loading />
             },
-
             {
-                path: 'shareTips',
-                element: <PrivateProvider><ShareTips></ShareTips></PrivateProvider>
+                path: "shareTips",
+                element: <PrivateProvider><ShareTips /></PrivateProvider>
             },
             {
                 path: 'myTips',
-                element: <PrivateProvider><MyTips></MyTips></PrivateProvider>
+                element: <PrivateProvider><MyTips /></PrivateProvider>,
+                hydrateFallbackElement: <Loading />
+            },
+
+            {
+                path: "updateTips/:id",
+                loader: ({ params }) =>
+                    fetch(`http://localhost:5000/updateTips/${params.id}`),
+                element: <PrivateProvider><UpdateTips /></PrivateProvider>,
+                hydrateFallbackElement: <Loading />
+
             }
 
         ]
@@ -62,7 +71,7 @@ const router = createBrowserRouter([
     {
         path: "",
         Component: AuthLayout,
-        errorElement: <Error></Error>,
+        errorElement: <Error />,
         children: [
             {
                 path: "login",

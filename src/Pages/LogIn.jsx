@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Contexts/AuthContext';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet-async';
 
 const LogIn = () => {
 
@@ -68,7 +69,10 @@ const LogIn = () => {
     }
 
     return (
-        <div className="hero mt-16 p-3 ">
+        <div className="hero  p-3 ">
+            <Helmet>
+                <title>GardenHub | Login</title>
+            </Helmet>
 
             <div className="card bg-secondary w-full max-w-sm shrink-0 shadow-2xl py-5" >
 
@@ -104,7 +108,7 @@ const LogIn = () => {
                 </div>
             </div >
 
-            <img className='fixed md:block h-[680px] z-10 left-0 top-0' src="https://greenola.casethemes.net/wp-content/uploads/2025/04/home-3-srv-img2.png" alt="" />
+            <img className='fixed md:block hidden h-[680px] z-10 left-0 top-0' src="https://greenola.casethemes.net/wp-content/uploads/2025/04/home-3-srv-img2.png" alt="" />
 
         </div >
     );

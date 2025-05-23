@@ -1,3 +1,13 @@
-.active {
+li .active {
     color: #018749;
+    border-bottom: #018749;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.tooltip[data-tip]::before {
+    background-color: #34d399;
+    color: white;
+    z-index: 10;
+
 }

@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Contexts/AuthContext';
 import { useNavigate } from 'react-router';
+import { Helmet } from 'react-helmet-async';
 
 const ShareTips = () => {
 
@@ -39,7 +40,10 @@ const ShareTips = () => {
     }
 
     return (
-        <div className='mb-20'>
+        <div className=''>
+            <Helmet>
+                <title>GardenHub | Share Tips</title>
+            </Helmet>
             <div
                 className="hero min-h-screen"
                 style={{
@@ -52,7 +56,7 @@ const ShareTips = () => {
                 <div className=' w-full mx-auto px-4'>
 
                     <div className='text-center text-white py-12'>
-                        <h2 className='text-3xl md:text-5xl font-semibold'>🌱 Shares Garden Tip</h2>
+                        <h2 className='text-3xl md:text-4xl font-semibold'>🌱 Shares Garden Tip</h2>
                         <p className="opacity-90 md:text-lg max-w-2xl mx-auto mt-4">
                             Got a green-thumb secret or a clever planting trick? Share your garden tips with the community and inspire others to create thriving, beautiful green spaces—one plant at a time.
                         </p>
@@ -119,6 +123,7 @@ const ShareTips = () => {
                             <fieldset className="p-1 rounded">
                                 <label className="block mb-1 font-semibold text-green-800">User Name</label>
                                 <input type="text" className="input bg-green-50 input-bordered border-green-800 w-full text-green-800"
+                                    name='name'
                                     value={user.displayName} readOnly />
                             </fieldset>
 
@@ -126,6 +131,7 @@ const ShareTips = () => {
                                 <label className="block mb-1 font-semibold text-green-800">User Email</label>
                                 <input type="email" className="input bg-green-50 input-bordered border-green-800 w-full text-green-800"
                                     placeholder='Enter your email'
+                                    name='email'
                                     value={user.email} readOnly />
                             </fieldset>
 

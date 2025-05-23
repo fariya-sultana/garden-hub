@@ -26,9 +26,9 @@ h4 {
 }
 
 
-/* html {
+html {
   overflow-y: scroll;
-} */
+}
 
 @keyframes swing {
   0% {
@@ -44,7 +44,7 @@ h4 {
   }
 }
 
-@keyframes floating {
+/* @keyframes floating {
   0% {
     transform: translateY(0) rotate(0deg);
     opacity: 1;
@@ -59,7 +59,7 @@ h4 {
     transform: translateY(0) rotate(-10deg);
     opacity: 1;
   }
-}
+} */
 
 .animate-floating {
   animation: floating 4s ease-in-out infinite;
