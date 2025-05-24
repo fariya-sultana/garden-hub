@@ -85,13 +85,13 @@ const MyTips = () => {
                                         <td className="px-4 py-2">{tip.plant}</td>
                                         <td className="px-4 py-2">{tip.category}</td>
                                         <td className="px-4 py-2">{tip.availability}</td>
-                                        <td className="px-4 py-2 flex gap-2">
+                                        <td className="px-4 py-2 lg:flex gap-2 ">
                                             <Link to={`/updateTips/${tip._id}`}>
-                                                <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded btn-xs btn md:btn-md outline-0 border-0"> Update</button>
+                                                <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded btn-xs btn md:btn-sm outline-0 border-0"> Update</button>
                                             </Link>
                                             <button
                                                 onClick={() => handleDelete(tip._id)}
-                                                className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded btn-xs btn md:btn-md outline-0 border-0"
+                                                className="md:mt-2 mt-1 lg:mt-0 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded btn-xs btn md:btn-sm outline-0 border-0"
                                             >
                                                 Delete
                                             </button>

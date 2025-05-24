@@ -1,13 +1,14 @@
 import React, { use } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Contexts/AuthContext';
-import { useLoaderData, useParams } from 'react-router';
+import { useLoaderData, useNavigate, useParams } from 'react-router';
 import { Helmet } from 'react-helmet-async';
 
 const UpdateTips = () => {
     const tip = useLoaderData();
     const { user } = use(AuthContext);
     const params = useParams();
+    const navigate = useNavigate();
 
 
     const handleUpdateTips = e => {
@@ -33,6 +34,7 @@ const UpdateTips = () => {
                         showConfirmButton: false,
                         timer: 1500
                     });
+                    navigate("/myTips")
                 }
             })
     }
@@ -116,7 +118,8 @@ const UpdateTips = () => {
                             </fieldset>
 
                             <div className="md:col-span-2 mt-4">
-                                <button type="submit" className="btn bg-green-800 w-full md:w-1/2 mx-auto block hover:bg-green-700 text-white text-lg font-semibold">
+                                <button 
+                                type="submit" className="btn bg-green-800 w-full md:w-1/2 mx-auto block hover:bg-green-700 text-white text-lg font-semibold">
                                     ✅ Update Tip
                                 </button>
                             </div>

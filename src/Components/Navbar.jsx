@@ -58,7 +58,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='max-w-11/12 mx-auto '>
+        <div className='md:max-w-11/12 md:mx-auto '>
 
             <div className="navbar  bg-base-100 p-3">
 
@@ -66,7 +66,7 @@ const Navbar = () => {
 
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="  lg:hidden cursor-pointer">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                         </div>
                         <ul
                             tabIndex={0}
@@ -89,15 +89,15 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="navbar-end items-center">
+                <div className="navbar-end space-x-2  ">
 
                     {user ? (
-                        <div className="dropdown dropdown-end dropdown-center space-x-2 ">
+                        <div className="dropdown dropdown-end  md:space-x-2 ">
 
                             <div
                                 tabIndex={0}
                                 role="button"
-                                className=" rounded-full md:tooltip md:tooltip-bottom mt-2 border-primary border p-1 text-xs cursor-pointer"
+                                className="rounded-full md:mt-2 md:tooltip md:tooltip-bottom border-primary border p-1 text-xs cursor-pointer z-10"
                                 data-tip={user.displayName}
                             >
                                 <img
@@ -106,11 +106,10 @@ const Navbar = () => {
                                             ? user.photoURL
                                             : "https://i.postimg.cc/15HJjdw8/3135823.png"
                                     }
-                                    alt="User Avatar"
+                                    alt="User Avatar" 
                                     className="w-6 md:w-10 md:h-10 h-6 rounded-full object-cover"
                                     referrerPolicy="no-referrer"
                                 />
-
                             </div>
 
                             <div
@@ -127,39 +126,39 @@ const Navbar = () => {
                                 >
                                     Log Out <FcUnlock />
                                 </button>
-
                             </div>
 
                         </div>
-
                     ) : (
+                        <div className="flex items-center gap-1 md:gap-2 md:my-4">
+                            <Link
+                                to={"/login"}
+                                className="btn bg-green-800 text-white hover:bg-primary hover:text-white font-bold btn-sm"
+                            >
+                                Login
+                            </Link>
 
-                        <>
-                            <div className='my-4'>
-                                <Link
-                                    to={"/login"}
-                                    className=" btn bg-green-800 text-white hover:bg-primary hover:text-white font-bold btn-sm md:mr-2 mr-1"
-                                >
-                                    Login
-                                </Link>
-
-                                <Link
-                                    to={"/register"}
-                                    className="btn bg-green-800 btn-sm text-white font-bold hover:bg-primary hover:text-white md:mr-2 mr-1"
-                                >
-                                    Register
-                                </Link>
-                            </div>
-                        </>
+                            <Link
+                                to={"/register"}
+                                className="btn bg-green-800 btn-sm text-white font-bold hover:bg-primary hover:text-white"
+                            >
+                                Register
+                            </Link>
+                        </div>
                     )}
 
                     <button
                         onClick={handleTheme}
-                        className='btn btn-circle cursor-pointer btn-sm md:btn-md rounded-full md:text-3xl text-xl'>
+                        className='btn btn-circle btn-sm md:btn-md rounded-full md:text-3xl text-xl'
+                    >
                         {theme === 'light' ? <MdNightlight /> : <MdOutlineLightMode />}
                     </button>
 
                 </div>
+
+
+
+
 
             </div>
 
