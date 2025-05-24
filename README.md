@@ -6,7 +6,7 @@
 
 ## 🔗 Live Website
 
-👉 [Visit GardenHub Live](https://your-live-site-link.netlify.app/)
+👉 [https://garden-hub-app.web.app/)
 
 ---
 
