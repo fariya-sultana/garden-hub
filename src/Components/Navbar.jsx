@@ -97,7 +97,7 @@ const Navbar = () => {
                             <div
                                 tabIndex={0}
                                 role="button"
-                                className=" rounded-full tooltip tooltip-bottom mt-2 border-primary border p-1 text-xs cursor-pointer"
+                                className=" rounded-full md:tooltip md:tooltip-bottom mt-2 border-primary border p-1 text-xs cursor-pointer"
                                 data-tip={user.displayName}
                             >
                                 <img
@@ -117,6 +117,9 @@ const Navbar = () => {
                                 tabIndex={0}
                                 className="dropdown-content menu bg-green-100 rounded-box z-1 w-40 p-2 shadow-sm text-center space-y-1"
                             >
+                                <h2 className='text-green-800 font-bold'>
+                                    {user?.displayName}
+                                </h2>
                                 <button
                                     type="submit"
                                     onClick={handleLogout}
@@ -135,14 +138,14 @@ const Navbar = () => {
                             <div className='my-4'>
                                 <Link
                                     to={"/login"}
-                                    className=" btn bg-green-800 text-white hover:bg-primary hover:text-white font-bold btn-xs md:btn-sm md:mr-2 mr-1"
+                                    className=" btn bg-green-800 text-white hover:bg-primary hover:text-white font-bold btn-sm md:mr-2 mr-1"
                                 >
                                     Login
                                 </Link>
 
                                 <Link
                                     to={"/register"}
-                                    className="btn bg-green-800 btn-xs text-white md:btn-sm font-bold hover:bg-primary hover:text-white md:mr-2 mr-1"
+                                    className="btn bg-green-800 btn-sm text-white font-bold hover:bg-primary hover:text-white md:mr-2 mr-1"
                                 >
                                     Register
                                 </Link>

@@ -24,7 +24,7 @@ const Banner = () => {
                         <div className="md:my-auto  relative z-10 md:ml-10 ml-4 mt-20">
                             <div className="max-w-2xl">
                                 <h3 className="mb-3 md:text-4xl text-2xl font-medium text-primary">🪴 Save the dates</h3>
-                                <h2 className="mb-5 md:text-5xl text-3xl font-medium text-white h-[120px] leading-10 md:leading-14">
+                                <h2 className="mb-5 md:text-5xl text-3xl font-medium text-white md:h-[120px] h-[80px] leading-10 md:leading-14">
                                     <span className="block min-h-[60px] md:min-h-[80px]">
                                         <Typewriter
                                             words={['Join Us - It\'s Time to Grow, Share and Inspire!']}

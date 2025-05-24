@@ -49,37 +49,37 @@ const BrowseTips = () => {
 
                     <div className="overflow-x-auto">
                         <table className="w-full text-left">
-                            <thead className="bg-white text-green-800 border-b-6 border-green-800 md:text-2xl text-lg font-semibold">
-                                <tr>
-                                    <th className="p-4">Image</th>
-                                    <th className="p-4">Title</th>
-                                    <th className="p-4">Category</th>
-                                    <th className="p-4">Level</th>
-                                    <th className="p-4">Details</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {filteredTips.map(tip => (
-                                    <tr key={tip._id} className="hover:bg-green-50 text-green-800 md:text-2xl font-medium">
-                                        <td className="md:p-2 p-4 border-b-3 border-green-800">
-                                            <img src={tip.image} alt={tip.title} className="w-16 h-16  md:w-24 md:h-24 object-cover rounded" />
-                                        </td>
-                                        <td className="md:p-2 p-4 border-b-3 border-green-800">{tip.title}</td>
-                                        <td className="md:p-2 p-4 border-b-3 border-green-800">{tip.category}</td>
-                                        <td className="md:p-2 p-4 border-b-3 border-green-800">{tip.level}</td>
-                                        <td className="md:p-2 p-4 border-b-3 border-green-800 text-center">
-                                            <Link to={`/tipsDetails/${tip._id}`}>
-                                                <button
-                                                    className="text-green-700 cursor-pointer"
-                                                >
-                                                    <FaEye className='md:size-6 size-4' />
-                                                </button>
-                                            </Link>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+        <thead className="bg-white text-green-800 border-b-6 border-green-800 text-sm md:text-2xl font-semibold">
+            <tr>
+                <th className="p-2 md:p-4">Image</th>
+                <th className="p-2 md:p-4">Title</th>
+                <th className="p-2 md:p-4 hidden sm:table-cell">Category</th>
+                <th className="p-2 md:p-4 hidden sm:table-cell">Level</th>
+                <th className="p-2 md:p-4 text-center">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {filteredTips.map(tip => (
+                <tr key={tip._id} className="hover:bg-green-50 text-green-800 text-sm md:text-2xl font-medium">
+                    <td className="p-2 md:p-4 border-b-2 border-green-800">
+                        <img src={tip.image} alt={tip.title} className="w-12 h-12 md:w-24 md:h-24 object-cover rounded" />
+                    </td>
+                    <td className="p-2 md:p-4 border-b-2 border-green-800 break-words max-w-[120px] sm:max-w-full">
+                        {tip.title}
+                    </td>
+                    <td className="p-2 md:p-4 border-b-2 border-green-800 hidden sm:table-cell">{tip.category}</td>
+                    <td className="p-2 md:p-4 border-b-2 border-green-800 hidden sm:table-cell">{tip.level}</td>
+                    <td className="p-2 md:p-4 border-b-2 border-green-800 text-center">
+                        <Link to={`/tipsDetails/${tip._id}`}>
+                            <button className="text-green-700 cursor-pointer">
+                                <FaEye className='text-lg md:text-2xl' />
+                            </button>
+                        </Link>
+                    </td>
+                </tr>
+            ))}
+        </tbody>
+    </table>
 
                         {filteredTips.length === 0 && (
                             <p className="text-center mt-4 md:text-xl text-green-800">No public tips found for this filter.</p>

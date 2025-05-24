@@ -2,7 +2,7 @@ import React from 'react';
 
 const ChooseUs = () => {
     return (
-        <div className='mx-4 my-16 md:my-30'>
+        <div className='mx-4 my-6 md:my-20'>
             <div className='text-center'>
                 <button className='btn mb-3 md:mb-5 bg-green-800 text-white rounded-full relative '>WHY CHOOSE US
                     <img className=' absolute bottom-5 -right-4' src="/public/plant-leaf.png" alt="" width={30} />
@@ -40,10 +40,8 @@ const ChooseUs = () => {
                     </div>
                 </div>
 
-                <div className='w-fit relative mx-auto group'>
-                    <img className='md:w-[485px] md:h-[567px] bg-primary p-2 rounded-bl-[40%] rounded-tr-[40%] rounded-2xl' src="https://greenola.casethemes.net/wp-content/uploads/2025/04/home-3-bg1-486x571.webp" alt="" />
-
-                    <img className=' md:w-[436px] z-10  msd:h-[515px] absolute md:left-20 md:top-20 top-6 left-2 transition-all duration-500 ease-in-out transform group-hover:scale-105' src="https://greenola.casethemes.net/wp-content/uploads/2025/04/home-3-author1.webp" alt="" />
+                <div className=' mx-auto group relative'>
+                    <img className='w-[300px] md:w-[436px]  md:h-[536px] bg-primary p-2 rounded-bl-[40%] rounded-tr-[40%] rounded-2xl transition-all duration-500 ease-in-out transform group-hover:scale-105 mb-8' src="https://i.postimg.cc/gk44pKxx/gardener-and-his-flowers-e1636043266831-pfkrgo4wcqa32jd41ephug6til9xyp1kxqxt4o7x3c.jpg" alt="" />
                 </div>
 
             </div>
