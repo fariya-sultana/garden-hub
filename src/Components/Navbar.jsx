@@ -23,6 +23,7 @@ const Navbar = () => {
             user && <>
                 <li className='lg:hover:text-primary' ><NavLink to={'/shareTips'}>Share a Garden Tip</NavLink></li>
                 <li className='lg:hover:text-primary' ><NavLink to={'/myTips'}>My Tips</NavLink></li>
+                <li className='lg:hover:text-primary' ><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
             </>
         }
     </>

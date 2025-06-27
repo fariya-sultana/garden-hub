@@ -16,6 +16,9 @@ import TipsDetails from "../Pages/TipsDetails";
 import UpdateTips from "../Pages/UpdateTips";
 import Loading from "../Components/Loading";
 import AboutUs from "../Pages/AboutUs";
+import ContactUs from "../Pages/ContactUs";
+import Dashboard from "../Pages/Dashboard";
+
 
 const router = createBrowserRouter([
     {
@@ -69,7 +72,16 @@ const router = createBrowserRouter([
             {
                 path: 'aboutUs',
                 Component: AboutUs
+            },
+            {
+                path: 'contactUs',
+                Component: ContactUs
+            },
+            {
+                path: "dashboard",
+                element:<PrivateProvider><Dashboard /></PrivateProvider>
             }
+            
 
         ]
     },

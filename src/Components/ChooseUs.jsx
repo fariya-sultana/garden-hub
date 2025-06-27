@@ -4,7 +4,7 @@ const ChooseUs = () => {
     return (
         <div className='mx-4 my-6 md:my-20'>
             <div className='text-center'>
-                <button className='btn mb-3 md:mb-5 bg-green-800 text-white rounded-full relative '>WHY CHOOSE US
+                <button className='btn mb-3 cursor-text md:mb-5 bg-green-800 text-white rounded-full relative '>WHY CHOOSE US
                     <img className=' absolute bottom-5 -right-4' src="/public/plant-leaf.png" alt="" width={30} />
                 </button>
                 <h2 className='md:text-4xl text-3xl mb-5 font-bold'>Why we are considered as the best</h2>
@@ -44,7 +44,7 @@ const ChooseUs = () => {
                     <img className='w-[300px] md:w-[436px]  md:h-[536px] bg-primary p-2 rounded-bl-[40%] rounded-tr-[40%] rounded-2xl transition-all duration-500 ease-in-out transform group-hover:scale-105 mb-8' src="https://i.postimg.cc/gk44pKxx/gardener-and-his-flowers-e1636043266831-pfkrgo4wcqa32jd41ephug6til9xyp1kxqxt4o7x3c.jpg" alt="" />
                 </div>
 
-            </div>
+            </div> 
         </div>
     );
 };

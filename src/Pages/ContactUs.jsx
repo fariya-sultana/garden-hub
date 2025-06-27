@@ -1,98 +1,107 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Swal from 'sweetalert2';
+import aboutImg from '../assets/download.jpg';
 
 const ContactUs = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Show SweetAlert
+        Swal.fire({
+            title: 'Appointment Requested!',
+            text: 'We will contact you shortly.',
+            icon: 'success',
+            confirmButtonColor: '#38a169'
+        });
+
+        e.target.reset(); // Optional: clear the form
+    };
+
     return (
         <div className="bg-green-50 min-h-screen">
             <Helmet>
                 <title>GardenHub | Contact Us</title>
             </Helmet>
 
-            {/* Hero Contact Form Section */}
-            <div
-                className="bg-cover bg-center py-20 px-4 md:px-12 flex justify-center items-center"
-                style={{
-                    backgroundImage:
-                        "url('https://i.ibb.co/ds3fdTf4/8be1acdb483d6b289f4bcfb93ae9e6d7.jpg')",
-                }}
-            >
-                <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl p-6 md:p-10 w-full max-w-4xl">
-                    <h2 className="text-3xl md:text-4xl text-green-800 font-bold mb-6 text-center">
-                        Get an Appointment
-                    </h2>
-                    <form className="space-y-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label className="block text-green-700 font-semibold mb-1">Name</label>
-                                <input
-                                    type="text"
-                                    placeholder="Your Name"
-                                    className="w-full p-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500"
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-green-700 font-semibold mb-1">Email</label>
-                                <input
-                                    type="email"
-                                    placeholder="Your Email"
-                                    className="w-full p-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500"
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-green-700 font-semibold mb-1">Phone</label>
-                                <input
-                                    type="tel"
-                                    placeholder="Phone Number"
-                                    className="w-full p-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500"
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-green-700 font-semibold mb-1">Date</label>
-                                <input
-                                    type="date"
-                                    className="w-full p-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500"
-                                />
-                            </div>
-                        </div>
+            {/* Hero Section */}
+            <div className="bg-green-700 text-white text-center py-10">
+                <h2 className="text-3xl md:text-5xl font-semibold">Contact Us</h2>
+            </div>
 
+            {/* Info & Form Section */}
+            <div className="flex flex-col md:flex-row items-stretch w-full max-w-6xl mx-auto my-16 px-4 gap-8">
+
+                {/* Contact Info */}
+                <div className="bg-white shadow-xl rounded-2xl p-8 flex-1">
+                    <h3 className="text-2xl font-bold text-green-800 mb-6">Contact Information</h3>
+                    <div className="space-y-4 text-green-700 text-lg">
                         <div>
-                            <label className="block text-green-700 font-semibold mb-1">Message</label>
-                            <textarea
-                                rows="4"
-                                placeholder="Your message..."
-                                className="w-full p-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500"
+                            <h4 className="font-semibold">📍 Address</h4>
+                            <p>123 Green Lane, Eco City, Garden State</p>
+                        </div>
+                        <div>
+                            <h4 className="font-semibold">📞 Phone</h4>
+                            <p>+1 800 123 4567</p>
+                        </div>
+                        <div>
+                            <h4 className="font-semibold">✉️ Email</h4>
+                            <p>contact@gardenhub.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Appointment Form */}
+                <div
+                    className="rounded-2xl shadow-xl p-8 flex-1"
+                    style={{ backgroundImage: `url(${aboutImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+                >
+                    <h3 className="text-2xl font-bold text-white mb-6 text-center">Get Appointment</h3>
+                    <form className="space-y-6" onSubmit={handleSubmit}>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input
+                                type="text"
+                                placeholder="Name*"
+                                required
+                                className="p-4 rounded-full border w-full bg-white text-black placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            />
+                            <input
+                                type="email"
+                                placeholder="E-mail*"
+                                required
+                                className="p-4 rounded-full border w-full bg-white text-black placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            />
+                            <input
+                                type="tel"
+                                placeholder="Phone No*"
+                                required
+                                className="p-4 rounded-full border w-full bg-white text-black placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            />
+                            <input
+                                type="date"
+                                required
+                                className="p-4 rounded-full border w-full bg-white text-black placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
                             />
                         </div>
+
+                        <textarea
+                            rows="4"
+                            placeholder="Message*"
+                            required
+                            className="w-full p-4 border rounded-2xl bg-white text-black placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+                        ></textarea>
 
                         <div className="text-center">
                             <button
                                 type="submit"
-                                className="bg-green-700 hover:bg-green-800 text-white text-lg font-semibold px-8 py-3 rounded-lg transition duration-300"
+                                className="bg-green-600 hover:bg-green-700 text-white text-lg font-semibold px-8 py-3 rounded-full transition duration-300"
                             >
                                 Get Appointment
                             </button>
                         </div>
                     </form>
                 </div>
-            </div>
 
-            {/* Contact Info Section */}
-            <div className="py-20 bg-white px-4 md:px-16 text-green-800">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Contact Information</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                    <div>
-                        <h4 className="text-xl font-semibold mb-2">📍 Address</h4>
-                        <p>123 Green Lane, Eco City, Garden State</p>
-                    </div>
-                    <div>
-                        <h4 className="text-xl font-semibold mb-2">📞 Phone</h4>
-                        <p>+1 800 123 4567</p>
-                    </div>
-                    <div>
-                        <h4 className="text-xl font-semibold mb-2">✉️ Email</h4>
-                        <p>contact@gardenhub.com</p>
-                    </div>
-                </div>
             </div>
 
             {/* Map Section */}

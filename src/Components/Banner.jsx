@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import { Typewriter } from 'react-simple-typewriter';
+import { Link } from 'react-router';
 
 const Banner = () => {
     return (
@@ -40,7 +41,7 @@ const Banner = () => {
 
                                 <p className="mb-5 max-w-xl text-white opacity-70">June 14th 10am-12pm Growing Tomatoes presented by Dr.David Boucher.July 12th 10am-12pm Ask a Master Gardener & Tool presented by Dana Withall,Donn Reese, and Kathy Pyle
                                 </p>
-                                <button className="btn btn-primary text-white">Contact GardenHUb</button>
+                                <Link to={'/contactUs'}><button className="btn btn-primary text-white">Contact GardenHUb</button></Link>
                             </div>
                         </div>
                     </div>
@@ -72,7 +73,7 @@ const Banner = () => {
                                 </h2>
                                 <p className="mb-5 text-white opacity-80">Are you passionate about gardening and want to improve campus food security?Then you should apply to volunteer with us!Application will close Monday,may 30th 2025
                                 </p>
-                                <button className="btn btn-primary text-white">Contact GardenHUb</button>
+                                <Link to={'/contactUs'}><button className="btn btn-primary text-white">Contact GardenHUb</button></Link>
                             </div>
                         </div>
                     </div>
@@ -107,7 +108,7 @@ const Banner = () => {
                                     Whether you're a seasoned gardener or just starting out, our Garden Party virtual series brings together experts and enthusiasts to explore the joys of planting
                                 </p>
 
-                                <button className="btn btn-primary text-white">Contact GardenHUb</button>
+                                <Link to={'/contactUs'}><button className="btn btn-primary text-white">Contact GardenHUb</button></Link>
                             </div>
                         </div>
                     </div>
