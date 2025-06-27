@@ -38,7 +38,7 @@ const DashboardOverview = () => {
     ];
 
     return (
-        <div className="p-4 md:p-6">
+        <div className="p-4 md:p-6 bg-green-50 w-full min-h-screen">
             <h1 className="text-3xl font-bold text-center mb-8 text-green-900 mt-8">
                 📊 Dashboard Overview
             </h1>

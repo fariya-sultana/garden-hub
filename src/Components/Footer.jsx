@@ -58,7 +58,7 @@ const Footer = () => {
                                     type="email"
                                     required
                                     placeholder="Enter Email"
-                                    className="input join-item text-green-800 border-none"
+                                    className="input join-item text-green-800 border-none bg-green-50 "
                                 />
                                 <button type="submit" className="btn btn-primary join-item">
                                     Subscribe

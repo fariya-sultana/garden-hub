@@ -58,9 +58,11 @@ const MyTips = () => {
                 <title>GardenHub | MyTips</title>
             </Helmet>
             {tips.length === 0 ? (
-                <div className="text-center  py-20">
-                    <h2 className="text-2xl font-bold mb-4">No Tips Found 🌱</h2>
-                    <p className="text-lg opacity-50">You haven't shared any garden tips yet. Start by sharing your knowledge to help others grow!</p>
+                <div className="text-center  py-20 bg-green-50  px-4 rounded-lg shadow-md">
+                    <div>
+                        <h2 className="text-2xl font-bold mb-4 text-green-800">No Tips Found 🌱</h2>
+                        <p className="text-lg opacity-50 text-green-600">You haven't shared any garden tips yet. Start by sharing your knowledge to help others grow!</p>
+                    </div>
                 </div>
             ) : (
                 <>
