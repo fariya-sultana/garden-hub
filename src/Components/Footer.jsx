@@ -3,6 +3,7 @@ import { CiTwitter } from 'react-icons/ci';
 import { FaInstagram } from 'react-icons/fa';
 import { FiYoutube } from 'react-icons/fi';
 import { SlSocialFacebook } from 'react-icons/sl';
+import { Link } from 'react-router';
 
 const Footer = () => {
     return (
@@ -20,11 +21,9 @@ const Footer = () => {
                 </nav>
                 <nav className='md:pl-5'>
                     <h4 className=" font-bold text-lg text-primary">Contact Info</h4>
-                    <a className="link link-hover">About Us</a>
-                    <a className="link link-hover">Contact Us</a>
-                    <a className="link link-hover">Our Team</a>
-                    <a className="link link-hover">Book GardenHub</a>
-                    <a className="link link-hover">Visit Location</a>
+                    <Link to={'/aboutUs'}><a className="link link-hover">About Us</a></Link>
+                    <Link to={'/contactUs'}><a className="link link-hover">Contact Us</a></Link>
+                    <Link to={'/ourTeam'}><a className="link link-hover">Our Team</a></Link>
                 </nav>
                 <nav className='md:pl-5'>
                     <h4 className=" font-bold text-lg text-primary">Services</h4>

@@ -6,7 +6,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Banner = () => {
     return (
-        <div className="">
+        <div className=" ">
             <Swiper
                 slidesPerView={1}
                 loop={true}
@@ -14,7 +14,7 @@ const Banner = () => {
                 modules={[Autoplay]}>
                 <SwiperSlide>
                     <div
-                        className="hero min-h-screen md:place-items-start relative"
+                        className="hero  md:place-items-start relative h-[70vh]"
                         style={{
                             backgroundImage:
                                 "url(https://i.postimg.cc/wBL8W8RS/gardening-5.jpg)",
@@ -24,7 +24,7 @@ const Banner = () => {
                         <div className="md:my-auto  relative z-10 md:ml-10 ml-4 mt-20">
                             <div className="max-w-2xl">
                                 <h3 className="mb-3 md:text-4xl text-2xl font-medium text-primary">🪴 Save the dates</h3>
-                                <h2 className="mb-5 md:text-5xl text-3xl font-medium text-white md:h-[120px] h-[80px] leading-10 md:leading-14">
+                                <h2 className="mb-5 md:text-5xl text-3xl font-medium text-white md:h-[120px] h-[100px] leading-10 md:leading-14">
                                     <span className="block min-h-[60px] md:min-h-[80px]">
                                         <Typewriter
                                             words={['Join Us - It\'s Time to Grow, Share and Inspire!']}
@@ -48,7 +48,7 @@ const Banner = () => {
 
                 <SwiperSlide>
                     <div
-                        className="hero min-h-screen md:place-items-start relative"
+                        className="hero h-[70vh]  md:place-items-start relative"
                         style={{
                             backgroundImage:
                                 "url(https://i.postimg.cc/Bt92BFWW/gardening-2.jpg)",
@@ -80,7 +80,7 @@ const Banner = () => {
 
                 <SwiperSlide>
                     <div
-                        className="hero min-h-screen"
+                        className="hero h-[70vh]"
                         style={{
                             backgroundImage:
                                 "url(https://i.postimg.cc/Fz10XJkq/top-view-gardening-tools-plants.jpg)",

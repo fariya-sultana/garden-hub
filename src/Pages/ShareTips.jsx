@@ -44,20 +44,15 @@ const ShareTips = () => {
             <Helmet>
                 <title>GardenHub | Share Tips</title>
             </Helmet>
-            <div
-                className="hero min-h-screen"
-                style={{
-                    backgroundImage:
-                        "url(https://i.ibb.co/nsdGb707/leaf-nature-green-spring-122429.jpg)",
-                }}
-            >
+            <div className="bg-green-50 min-h-screen pb-12">
+
                 <div className="hero-overlay bg-opacity-40"></div>
 
                 <div className=' w-full mx-auto px-4'>
 
                     <div className='text-center text-white py-12'>
-                        <h2 className='text-3xl md:text-4xl font-semibold'>🌱 Shares Garden Tip</h2>
-                        <p className="opacity-90 md:text-lg max-w-2xl mx-auto mt-4">
+                        <h2 className='text-3xl md:text-4xl font-semibold text-green-800'>🌱 Shares Garden Tip</h2>
+                        <p className="opacity-50 md:text-lg max-w-2xl mx-auto mt-4 text-green-800">
                             Got a green-thumb secret or a clever planting trick? Share your garden tips with the community and inspire others to create thriving, beautiful green spaces—one plant at a time.
                         </p>
                     </div>

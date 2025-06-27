@@ -15,6 +15,7 @@ import BrowseTips from "../Pages/BrowseTips";
 import TipsDetails from "../Pages/TipsDetails";
 import UpdateTips from "../Pages/UpdateTips";
 import Loading from "../Components/Loading";
+import AboutUs from "../Pages/AboutUs";
 
 const router = createBrowserRouter([
     {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
                 element: <PrivateProvider><UpdateTips /></PrivateProvider>,
                 hydrateFallbackElement: <Loading />
 
+            },
+            {
+                path: 'aboutUs',
+                Component: AboutUs
             }
 
         ]

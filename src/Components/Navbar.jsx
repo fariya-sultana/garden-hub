@@ -18,8 +18,13 @@ const Navbar = () => {
         <li className=''><NavLink to={'/'}>Home</NavLink></li>
         <li className='lg:hover:text-primary' ><NavLink to={'/gardeners'}>Explore Gardeners</NavLink></li>
         <li className='lg:hover:text-primary' ><NavLink to={'/browseTips'}>Browse Tips</NavLink></li>
-        <li className='lg:hover:text-primary' ><NavLink to={'/shareTips'}>Share a Garden Tip</NavLink></li>
-        <li className='lg:hover:text-primary' ><NavLink to={'/myTips'}>My Tips</NavLink></li>
+
+        {
+            user && <>
+                <li className='lg:hover:text-primary' ><NavLink to={'/shareTips'}>Share a Garden Tip</NavLink></li>
+                <li className='lg:hover:text-primary' ><NavLink to={'/myTips'}>My Tips</NavLink></li>
+            </>
+        }
     </>
 
     const handleLogout = () => {
@@ -58,9 +63,9 @@ const Navbar = () => {
     }
 
     return (
-        <div className='md:max-w-11/12 md:mx-auto '>
+        <div className='bg-base-100 sticky top-0 z-50'>
 
-            <div className="navbar  bg-base-100 p-3">
+            <div className="navbar md:max-w-11/12 md:mx-auto  p-3">
 
                 <div className="navbar-start">
 
@@ -106,7 +111,7 @@ const Navbar = () => {
                                             ? user.photoURL
                                             : "https://i.postimg.cc/15HJjdw8/3135823.png"
                                     }
-                                    alt="User Avatar" 
+                                    alt="User Avatar"
                                     className="w-6 md:w-10 md:h-10 h-6 rounded-full object-cover"
                                     referrerPolicy="no-referrer"
                                 />
