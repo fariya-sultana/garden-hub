@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link, useLoaderData } from 'react-router';
 
 const BrowseTips = () => {
-    const tips = useLoaderData();
+    const tips = useLoaderData() || [];
     const [filterLevel, setFilterLevel] = useState('');
     const [sortOrder, setSortOrder] = useState('asc');
 

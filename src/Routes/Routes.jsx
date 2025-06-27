@@ -17,7 +17,8 @@ import UpdateTips from "../Pages/UpdateTips";
 import Loading from "../Components/Loading";
 import AboutUs from "../Pages/AboutUs";
 import ContactUs from "../Pages/ContactUs";
-import Dashboard from "../Pages/Dashboard";
+import DashboardLayout from "../Layouts/DashboardLayout";
+import DashboardOverview from "../Pages/DashboardOverview";
 
 
 const router = createBrowserRouter([
@@ -76,13 +77,34 @@ const router = createBrowserRouter([
             {
                 path: 'contactUs',
                 Component: ContactUs
+            }
+
+
+
+        ]
+    },
+    {
+        path: "dashboard",
+        element: <PrivateProvider><DashboardLayout /></PrivateProvider>,
+        errorElement: <Error />,
+        children: [
+            {
+                index: true,
+                Component: DashboardOverview
             },
             {
-                path: "dashboard",
-                element:<PrivateProvider><Dashboard /></PrivateProvider>
+                path: "allItems",
+                loader: () => fetch("https://garden-hub-server-zeta.vercel.app/browseTips"),
+                Component: BrowseTips
+            },
+            {
+                path: "addItem",
+                Component: ShareTips
+            },
+            {
+                path: "myItems",
+                Component: MyTips
             }
-            
-
         ]
     },
     {
