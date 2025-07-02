@@ -5,6 +5,8 @@ import { FiYoutube } from 'react-icons/fi';
 import { SlSocialFacebook } from 'react-icons/sl';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
+import logoImg from '../../public/plant-leaf.png';
+
 
 const Footer = () => {
     return (
@@ -12,7 +14,7 @@ const Footer = () => {
             <footer className="footer sm:footer-horizontal text-neutral-content ">
                 <nav className=''>
                     <h2 className='text-xl md:text-3xl inline-flex items-center text-white'>
-                        <img className='w-8 md:w-10 md:mr-2' src="/public/plant-leaf.png" alt="" />GardenHub
+                        <img className='w-8 md:w-10 md:mr-2' src={logoImg} alt="" />GardenHub
                     </h2>
 
                     <p>📞 29 Madison Street, LA 20183, Dhaka</p>

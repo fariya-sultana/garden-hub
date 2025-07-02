@@ -7,6 +7,7 @@ import { FcUnlock } from 'react-icons/fc';
 import { AuthContext } from '../Contexts/AuthContext';
 import Swal from 'sweetalert2';
 import { MdNightlight, MdOutlineLightMode } from 'react-icons/md';
+import logoImg from '../../public/plant-leaf.png';
 import { FaLightbulb } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -83,7 +84,7 @@ const Navbar = () => {
 
                     <div className='hidden md:block'>
                         <h2 className=' z-20 text-xl md:text-3xl inline-flex items-center text-secondary font-semibold'>
-                            <img className='w-8 md:w-10 md:mr-2' src="/public/plant-leaf.png" alt="" />Garden<span className='text-primary '>Hub</span>
+                            <img className='w-8 md:w-10 md:mr-2' src={logoImg} alt="" />Garden<span className='text-primary '>Hub</span>
                         </h2>
                     </div>
 
